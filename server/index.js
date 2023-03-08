@@ -9,6 +9,8 @@ import helmet from "helmet";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createProduct } from "./controllers/product.js";
+import { createCat } from "./controllers/cat.js";
+import catRoutes from "./routes/cats.js";
 import productRoutes from "./routes/products.js";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
@@ -44,11 +46,13 @@ const upload = multer({ storage });
 /* ROUTES WITH FILES */
 app.post("/auth/register", register);
 app.post("/products", createProduct);
+app.post("/cats", createCat);
 
 /* ROUTES */
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/products", productRoutes);
+app.use("/cats", catRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 5001;

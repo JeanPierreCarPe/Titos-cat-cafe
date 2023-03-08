@@ -1,0 +1,9 @@
+.paws-decorate {
+    position: absolute;
+    opacity: .75;
+    z-index: 1;
+}
+
+.paws-decorate.left-bottom {
+    transform: rotate(180deg);
+}

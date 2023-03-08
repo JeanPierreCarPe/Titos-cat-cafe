@@ -1,9 +1,49 @@
-import React from 'react'
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react'
 import './navbar.css'
 
 const Navbar = () => {
+
+  const [active, setActive] = useState(false);
+
+  const isActive = (e) => {
+    setActive(!active);
+  };
+
   return (
-    <div>Navbar</div>
+    <div className={active ? "navbar active" : "navbar"}>
+      <div className="navbar-header">
+        <img className="navbar-logo" src="assets/images/logo.png" alt=""></img>
+        <hr></hr>
+        <FontAwesomeIcon className='navbar-icon' icon={faShoppingBag} color='var(--primary-color)' size='xl'/>
+        <FontAwesomeIcon className='navbar-icon' icon={faUser} color='var(--primary-color)' size='xl'/>
+        <div
+          className={
+            active ? "navbar-menu-button active" : "navbar-menu-button"
+          }
+          onClick={(e) => {
+            isActive(e);
+          }}
+        >
+          <div className="navbar-menu-button-line"></div>
+        </div>
+      </div>
+      {active && <div className="navbar-menu">
+        <a className="navbar-menu-item" href="/">Nosotros</a>
+        <a className="navbar-menu-item" href="/">Menú</a>
+        <a className="navbar-menu-item" href="/">Peluditos</a>
+        <a className="navbar-menu-item" href="/">Recuerdos</a>
+        <a className="navbar-menu-item" href="/">Merchandise</a>
+        <hr></hr>
+        <div className="navbar-menu-social-media">
+          <a className="navbar-menu-social-media-item" href="/">Facebook</a>
+          <a className="navbar-menu-social-media-item" href="/">Instagram</a>
+          <a className="navbar-menu-social-media-item" href="/">Twitter</a>
+        </div>
+      </div>}
+    </div>
   )
 }
 

@@ -1,0 +1,19 @@
+.social-networks {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    column-gap: 35px;
+}
+
+.social-networks-img {
+    height: 100%;
+    transition: .3s ease-in-out;
+}
+
+.social-networks-img:hover {
+    transform: scale(1.2);
+}
