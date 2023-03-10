@@ -1,3 +1,4 @@
+export { default as CatsList } from "./cats/cats-list/CatsList"
 export { default as Footer } from "./footer/Footer";
 export { default as HomeAbout } from "./home/home-about/HomeAbout";
 export { default as HomeCats } from "./home/home-cats/HomeCats";

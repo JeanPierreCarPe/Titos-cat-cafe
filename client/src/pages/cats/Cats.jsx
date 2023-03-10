@@ -1,9 +1,14 @@
+import { CatsList, Footer, Navbar } from 'layouts'
 import React from 'react'
 import "./cats.css"
 
 const Cats = () => {
   return (
-    <div>Cats</div>
+    <div className='cats'>
+      <Navbar />
+      <CatsList />
+      <Footer />
+    </div>
   )
 }
 

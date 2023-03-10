@@ -1,0 +1,29 @@
+.cats-list{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 70px 40px;
+    row-gap: 40px;
+}
+
+.cats-list-title {
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: center;
+    width: 70%;
+}
+
+.cats-list-title span {
+    color: var(--primary-color);
+}
+
+.cats-list-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}

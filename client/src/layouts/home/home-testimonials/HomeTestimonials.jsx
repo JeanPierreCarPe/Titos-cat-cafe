@@ -92,8 +92,7 @@ const HomeTestimonials = () => {
     <div className="home-testimonials">
       <Title
         text="Clientes felices"
-        color="#FBFBFB"
-        style={{ width: "auto", alignItems: "center" }}
+        style={{ width: "auto", alignItems: "center", color:"#FBFBFB", fontSize:"var(--header-size-large)" }}
       />
       <div className="home-testimonials-content">
         {testimonialsItems.map((element, index) => {
