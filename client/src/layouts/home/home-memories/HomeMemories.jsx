@@ -39,9 +39,8 @@ const HomeMemories = () => {
   return (
     <div className="home-memories">
       <Title
-        style={{ width: "auto", alignItems: "center" }}
+        style={{ width: "auto", alignItems: "center", color:"#FBFBFB", fontSize:"var(--header-size-large)" }}
         text="Recuerdos"
-        color="#FBFBFB"
       />
       <div className="home-memories-content">
         {memoriesData.map((item, index) => {

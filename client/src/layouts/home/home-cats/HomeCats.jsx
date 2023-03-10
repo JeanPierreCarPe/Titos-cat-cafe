@@ -2,7 +2,8 @@ import { Button, CatImageCard, Title } from "components";
 import React, { useEffect, useState } from "react";
 import "./home-cats.css";
 
-const HomeCats = () => {
+const HomeCats = (props) => {
+  const { navigate } = props;
   const [catsData, setCatsData] = useState([]);
   const [first, setFirst] = useState(0);
   const [last, setLast] = useState(4);
@@ -14,6 +15,10 @@ const HomeCats = () => {
         setCatsData(data);
       });
   }, []);
+
+  function HandleClick() {
+    navigate("/cats");
+  }
 
   const sliderAction = (e, id) => {
     const actualCard = e.target;
@@ -29,14 +34,13 @@ const HomeCats = () => {
 
     document.getElementById(parent.id).classList.add("active");
     document.getElementById(previousCard.id).classList.remove("active");
-    
 
     console.log(firstCard);
 
     if (parent === lastCard) {
       setTimeout(() => {
-        setFirst(first +1);
-        setLast(last+1);
+        setFirst(first + 1);
+        setLast(last + 1);
       }, 700);
     }
 
@@ -47,13 +51,17 @@ const HomeCats = () => {
   return (
     <div className="home-cats">
       <Title
-        style={{ width: "auto", alignItems: "center" }}
+        style={{
+          width: "auto",
+          alignItems: "center",
+          color: "#FBFBFB",
+          fontSize: "var(--header-size-large)",
+        }}
         text="Nuestros Peluditos"
-        color="#FBFBFB"
       />
       <div className="home-cats-content">
         {catsData.slice(first, last).map((element, index) => {
-          const isActive = true
+          const isActive = true;
           return (
             <CatImageCard
               key={index}
@@ -67,7 +75,7 @@ const HomeCats = () => {
           );
         })}
       </div>
-      <Button text="Conocelos a todos" />
+      <Button text="Conocelos a todos" navigate={HandleClick} />
     </div>
   );
 };

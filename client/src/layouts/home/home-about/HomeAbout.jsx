@@ -55,9 +55,8 @@ const HomeAbout = () => {
             {dataSliderAbout.map((element, index) => (
               <div className="home-about-content-data-slider-slide">
                 <Title
-                  style={{ width: "auto", alignItems: "center" }}
+                  style={{ width: "auto", alignItems: "center", color:"var(--black-color)", fontSize: "var(--header-size-large)" }}
                   text={element.title}
-                  color="var(--black-color)"
                 />
                 <p className="home-about-content-data-slider-slide-text">
                   {element.text}
@@ -90,7 +89,6 @@ const HomeAbout = () => {
           cras proin bibendum. Pretium eget ultricies malesuada sit scelerisque
           laoreet porttitor quisque est. Volutpat malesuada a risus nulla tellus
           orci nisi quis vestibulum. Odio augue neque bibendum felis nunc."
-          color="var(--white-color)"
         />
         <AboutCard
           idPattern1="pattern-about-image-4"
@@ -106,7 +104,6 @@ const HomeAbout = () => {
           laoreet porttitor quisque est. Volutpat malesuada a risus nulla tellus
           orci nisi quis vestibulum. Odio augue neque bibendum felis nunc."
           style={{ flexDirection: "row-reverse" }}
-          color="var(--white-color)"
         />
         <AboutCard
           idPattern1="pattern-about-image-7"
@@ -121,7 +118,6 @@ const HomeAbout = () => {
           cras proin bibendum. Pretium eget ultricies malesuada sit scelerisque
           laoreet porttitor quisque est. Volutpat malesuada a risus nulla tellus
           orci nisi quis vestibulum. Odio augue neque bibendum felis nunc."
-          color="var(--white-color)"
         />
       </div>
     </div>

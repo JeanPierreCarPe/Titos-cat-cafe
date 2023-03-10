@@ -4,6 +4,17 @@
   --black-color: #252525;
   --white-color: #FBFBFB;
   --primary-color: #EFBE7D;
+
+  --header-size-xlarge: 72px;
+  --header-size-large: 56px;
+  --header-size-xmedium: 48px;
+  --header-size-medium: 32px;
+  --header-size-xsmall: 24px;
+  --header-size-small: 18px;
+
+  --paragraph-size-large: 24px;
+  --paragraph-size-large: 21px;
+  --paragraph-size-large: 18px;
 }
 
 * {
@@ -23,23 +34,27 @@ h6 {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: var(--header-size-xlarge);
 }
 
 h2 {
-  font-size: 56px;
+  font-size: var(--header-size-large);
 }
 
 h3 {
-  font-size: 48px;
+  font-size: var(--header-size-xmedium);
 }
 
 h4 {
-  font-size: 32px;
+  font-size: var(--header-size-medium);
 }
 
 h5 {
-  font-size: 24px;
+  font-size: var(--header-size-xsmall);
+}
+
+h6 {
+  font-size: var(--header-size-small);
 }
 
 p {

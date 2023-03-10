@@ -12,7 +12,6 @@ const AboutCard = (props) => {
     image3,
     title,
     alignItems,
-    color,
     style,
     text,
   } = props;
@@ -21,9 +20,8 @@ const AboutCard = (props) => {
     <div className="about-card" style={style}>
       <div className="about-card-content">
         <Title
-          style={{ alignItems: alignItems, rowGap: "15px" }}
+          style={{ color:"var(--white-color)", fontSize: "var(--header-size-large)", rowGap: "15px" }}
           text={title}
-          color={color}
         />
         <p className="about-card-content-text">{text}</p>
         <Button text="Leer mas"></Button>

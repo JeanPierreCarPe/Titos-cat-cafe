@@ -2,7 +2,7 @@ import React from "react";
 import "./paws-decorate.css";
 
 const PawsDecorate = (props) => {
-  const { position, top, left, right, bottom, color } = props;
+  const { position, top, left, right, bottom, color, opacity } = props;
 
   if (position === "left-bottom") {
     return (
@@ -17,6 +17,7 @@ const PawsDecorate = (props) => {
           right: `${right}`,
           left: `${left}`,
           bottom: `${bottom}`,
+          opacity: `${opacity}`
         }}
       >
         <path
@@ -95,6 +96,7 @@ const PawsDecorate = (props) => {
           right: `${right}`,
           left: `${left}`,
           bottom: `${bottom}`,
+          opacity: `${opacity}`
         }}
       >
         <path
