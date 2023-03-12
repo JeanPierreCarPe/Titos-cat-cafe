@@ -1,20 +1,14 @@
 import { Button, CatImageCard, Title } from "components";
-import React, { useEffect, useState } from "react";
+import { useFetch } from "hooks/useFetch";
+import React, { useState } from "react";
 import "./home-cats.css";
 
 const HomeCats = (props) => {
   const { navigate } = props;
-  const [catsData, setCatsData] = useState([]);
   const [first, setFirst] = useState(0);
   const [last, setLast] = useState(4);
 
-  useEffect(() => {
-    fetch("http://localhost:3001/cats")
-      .then((response) => response.json())
-      .then((data) => {
-        setCatsData(data);
-      });
-  }, []);
+  const { data, loading } = useFetch("http://localhost:3001/cats");
 
   function HandleClick() {
     navigate("/cats");
@@ -28,7 +22,7 @@ const HomeCats = (props) => {
     const firstCard = container.firstChild;
     const lastCard = container.lastChild.previousElementSibling;
 
-    const indexCard = catsData.findIndex((item) => {
+    const indexCard = data.findIndex((item) => {
       return item.id === id;
     });
 
@@ -60,7 +54,8 @@ const HomeCats = (props) => {
         text="Nuestros Peluditos"
       />
       <div className="home-cats-content">
-        {catsData.slice(first, last).map((element, index) => {
+        {loading && <h2>Cargando...</h2>}
+        {data?.slice(first, last).map((element, index) => {
           const isActive = true;
           return (
             <CatImageCard

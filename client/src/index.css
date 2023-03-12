@@ -13,8 +13,8 @@
   --header-size-small: 18px;
 
   --paragraph-size-large: 24px;
-  --paragraph-size-large: 21px;
-  --paragraph-size-large: 18px;
+  --paragraph-size-medium: 21px;
+  --paragraph-size-small: 18px;
 }
 
 * {
