@@ -1,0 +1,27 @@
+.input-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.input-text-box {
+    width: 100%;
+    font-family: "Dosis", sans-serif;
+    color: var(--white-color);
+    border: none;
+    background: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: var(--paragraph-size-large);
+}
+
+.input-text-box:focus {
+    outline: none;
+    background: none;
+}
+
+.input-horizontal-rule {
+    width: 100%;
+    border: 1.5px solid #EFBE7D;
+    border-radius: 2px;
+}

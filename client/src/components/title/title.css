@@ -1,0 +1,14 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    row-gap: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+.title-horizontal-rule {
+    width: 75%;
+    border: 2px solid #EFBE7D;
+    border-radius: 2px;
+}

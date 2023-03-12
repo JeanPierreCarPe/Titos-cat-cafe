@@ -1,0 +1,12 @@
+export { default as AboutCard } from "./about-card/AboutCard";
+export { default as Button } from "./button/Button";
+export { default as CatImageCard } from "./cat-image-card/CatImageCard";
+export { default as CatListCard } from "./cat-list-card/CatListCard";
+export { default as InputText } from "./input-text/InputText";
+export { default as MemoryCard } from "./memory-card/MemoryCard";
+export { default as PawsDecorate } from "./paws-decorate/PawsDecorate";
+export { default as SocialNetWorks } from "./social-networks/SocialNetworks";
+export { default as TestimonialCard } from "./testimonial-card/TestimonialCard";
+export { default as Title } from "./title/Title";
+export { default as LoginForm } from "./login-form/LoginForm";
+export { default as RegisterForm } from "./register-form/RegisterForm";

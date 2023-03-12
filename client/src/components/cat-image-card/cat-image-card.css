@@ -1,0 +1,113 @@
+.cat-image-card {
+  height: 400px;
+  width: 230px;
+  min-height: 400px;
+  min-width: 230px;
+  border-radius: 25px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s all ease-in-out;
+  cursor: pointer;
+}
+
+.cat-image-card.hide {
+  width: 0;
+  min-width: 0;
+  transition: .7s all ease-in-out;
+}
+
+.cat-image-card:hover {
+  transform: scale(1.05);
+  z-index: 100;
+}
+
+.cat-image-card.active {
+  height: 550px;
+  width: 300px;
+  min-height: 550px;
+  min-width: 300px;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.7s all ease-in-out;
+}
+
+.cat-image-card-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.cat-image-card-content-title {
+  position: absolute;
+  right: -215px;
+  color: var(--white-color);
+  rotate: -90deg;
+  width: 500px;
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.95);
+  transition: 0.7s all ease-in-out;
+  pointer-events: none;
+}
+
+.cat-image-card .cat-image-card-content-title {
+  bottom: 0px;
+  opacity: 0;
+}
+
+.cat-image-card.active .cat-image-card-content-title {
+  bottom: 215px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.cat-image-card-paw {
+  width: 80%;
+  height: fit-content;
+  position: absolute;
+  fill: var(--primary-color);
+  opacity: 0.5;
+  transition: 0.7s all ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cat-image-card.active:hover .cat-image-card.cat-image-card-paw {
+  fill: var(--white-color);
+  opacity: 0.9;
+}
+
+.cat-image-card .cat-image-card-paw.paw-top {
+  rotate: 45deg;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.cat-image-card.active .cat-image-card-paw.paw-top {
+  rotate: 45deg;
+  top: -20%;
+  right: -45%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.cat-image-card .cat-image-card-paw.paw-bottom {
+  rotate: -135deg;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.cat-image-card.active .cat-image-card-paw.paw-bottom {
+  rotate: -135deg;
+  bottom: -20%;
+  left: -45%;
+  opacity: 0.5;
+}
