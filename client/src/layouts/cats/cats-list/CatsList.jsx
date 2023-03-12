@@ -1,17 +1,11 @@
 import { CatListCard } from "components";
-import React, { useEffect, useState } from "react";
+import { useFetch } from "hooks/useFetch";
+import React from "react";
 import "./cats-list.css";
 
 const CatsList = () => {
-  const [catsData, setCatsData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/cats")
-      .then((response) => response.json())
-      .then((data) => {
-        setCatsData(data);
-      });
-  }, []);
+  
+  const { data, loading } = useFetch("http://localhost:3001/cats");
 
   return (
     <div className="cats-list">
@@ -19,7 +13,8 @@ const CatsList = () => {
         Un monton de <span>GATOS</span>, un monton de <span>AMOR</span>
       </h1>
       <div className="cats-list-content">
-        {catsData.map((element, index) => {
+        {loading && <h2>Cargando...</h2>}
+        {data?.map((element, index) => {
           return (
             <CatListCard
               key={`cat-${index}`}

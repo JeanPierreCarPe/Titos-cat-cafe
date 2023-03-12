@@ -21,7 +21,7 @@ const Navbar = () => {
         <img className="navbar-logo" src="assets/images/logo.png" alt="" onClick={() => {navigate('/')}}></img>
         <hr></hr>
         <FontAwesomeIcon className='navbar-icon' icon={faShoppingBag} color='var(--primary-color)' size='xl'/>
-        <FontAwesomeIcon className='navbar-icon' icon={faUser} color='var(--primary-color)' size='xl'/>
+        <FontAwesomeIcon className='navbar-icon' icon={faUser} color='var(--primary-color)' size='xl' onClick={() => {navigate('/login')}}/>
         <div
           className={
             active ? "navbar-menu-button active" : "navbar-menu-button"
